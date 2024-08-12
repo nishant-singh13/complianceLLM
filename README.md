@@ -17,9 +17,13 @@ To set up and run the ComplianceLLM server, follow these steps:
 git clone https://github.com/nishant-singh13/complianceLLM.git
 cd complianceLLM 
 ```
+## 2. ADD .env file on you local machine 
+```console
+OPENAI_API_KEY=your open API key
+COMPLIANCE_URL= compliance policy url ... exp : https://stripe.com/docs/treasury/marketing-treasury
+```
 
-
-## 2. Build and Run with Docker Compose
+## 3. Build and Run with Docker Compose
 Ensure Docker and Docker Compose are installed and running on your system. Then, use Docker Compose to build and start the services:
 
 
@@ -27,11 +31,11 @@ Ensure Docker and Docker Compose are installed and running on your system. Then,
 docker-compose up --build
 ```
 
-## 3. Access the Application
+## 4. Access the Application
 Once the containers are up, you can access the application at http://localhost:8000 (or whichever port is specified in your docker-compose.yml file).
 Here is swagger link : http://0.0.0.0:8000/docs
 
-## 4. API Usage
+## 5. API Usage
 You can interact with the compliance checking API as follows:
 ```console
 
@@ -54,8 +58,9 @@ Copy code
 }
 ```
 
-## 5 . Stopping the Server
+## 6 . Stopping the Server
 To stop the running Docker containers, use:
+
 
 ```console
 docker-compose down
